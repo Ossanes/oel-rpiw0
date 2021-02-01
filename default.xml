@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="git://github.com" name="github"/>
+  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
+  <remote fetch="git://git.openembedded.org" name="oe"/>
+  <remote fetch="ssh://git@github.com" name="github-ssh"/>
+
+  
+  <!-- ### Yocto Project release used as default for all included layers and components ### -->
+  <default revision="dunfell"/>
+
+  <!-- ### O.S. Systems Embedded Linux Core layers ### -->
+  <project remote="oe" revision="1.46" name="bitbake" path="sources/bitbake"/>
+  <project remote="oe" name="openembedded-core" path="sources/openembedded-core"/>
+
+  <project remote="github" name="OSSystemsEmbeddedLinux/meta-ossystems-base" path="sources/meta-ossystems-base"/>
+  <project remote="github" name="OSSystemsEmbeddedLinux/ossystems-yocto-base-scripts" path="sources/base">
+    <copyfile dest="setup-environment" src="setup-environment"/>
+  </project>
+
+  <project remote="github" revision="master" name="OSSystemsEmbeddedLinux/ye" path="sources/ye"/>
+
+  <!-- ### Project specific configuration ### -->
+  <project remote="github-ssh" revision="master" name="FreedomVeiculosEletricos/freedom-embedded-linux-platform" path="sources/platform"/>
+  <project remote="yocto" name="meta-raspberrypi" path="sources/meta-raspberrypi"/>
+  <project remote="oe" name="meta-openembedded" path="sources/meta-openembedded"/>
+  <project remote="github-ssh" revision="master" name="FreedomVeiculosEletricos/meta-freedom" path="sources/meta-freedom"/>
+</manifest>
