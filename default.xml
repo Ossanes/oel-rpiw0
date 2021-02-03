@@ -4,7 +4,7 @@
   <remote fetch="git://git.yoctoproject.org" name="yocto"/>
   <remote fetch="git://git.openembedded.org" name="oe"/>
   <remote fetch="ssh://git@github.com" name="github-ssh"/>
-
+  <remote fetch="https://github.com/Freescale" name="freescale"/>
   
   <!-- ### Yocto Project release used as default for all included layers and components ### -->
   <default revision="dunfell"/>
@@ -21,8 +21,10 @@
   <project remote="github" revision="master" name="OSSystemsEmbeddedLinux/ye" path="sources/ye"/>
 
   <!-- ### Project specific configuration ### -->
-  <project remote="github-ssh" revision="master" name="FreedomVeiculosEletricos/freedom-embedded-linux-platform" path="sources/platform"/>
-  <project remote="yocto" name="meta-raspberrypi" path="sources/meta-raspberrypi"/>
+  <project remote="github-ssh" name="Ossanes/oel-rpiw0" path="sources/platform"/>
+  <!-- <project remote="yocto" name="meta-raspberrypi" path="sources/meta-raspberrypi"/> --> 
+  <project remote="Freescale" name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
   <project remote="oe" name="meta-openembedded" path="sources/meta-openembedded"/>
-  <project remote="github-ssh" revision="master" name="FreedomVeiculosEletricos/meta-freedom" path="sources/meta-freedom"/>
+  <project remote="github-ssh" revision="master" name="Ossanes/meta-aquino" path="sources/meta-aquino"/>
+  <project remote="Freescale" name="meta-freescale" path="sources/meta-freescale"/> 
 </manifest>
